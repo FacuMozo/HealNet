@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header/Header';
+import BannerSection from './components/BannerSection/BannerSection';
+import AppointmentForm from './components/AppointmentForm/AppointmentForm';
+import ServicesSection from './components/ServicesSection/ServicesSection';
+import AboutUsCard from './components/AboutUsCard/AboutUsCard';
+import PlatformFunctionality from './components/PlatformFunctionality/PlatformFunctionality';
+import Testimonials from './components/Testimonials/Testimonials';
+import StaffSection from './components/StaffSection/StaffSection';
+import ContactUs from './components/ContactUs/ContactUs';
+import Footer from './components/Footer/Footer';
+import './styles.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BannerSection />
+      <hr className='border-5 border-primary'/>
+      <AppointmentForm />
+      <hr className='border-5 border-primary'/>
+      <ServicesSection />
+      <hr className='border-5 border-primary'/>
+      <AboutUsCard />
+      <hr className='border-5 border-primary'/>
+      <PlatformFunctionality />
+      <hr className='border-5 border-primary'/>
+      <Testimonials />
+      <hr className='border-5 border-primary' />
+      <StaffSection />
+      <hr className='border-5 border-primary' />
+      <ContactUs />
+      <hr className='border-5 border-primary' />
+      <Footer />
+      
     </div>
   );
 }
