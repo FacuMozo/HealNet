@@ -9,7 +9,9 @@ import Testimonials from './components/Testimonials/Testimonials';
 import StaffSection from './components/StaffSection/StaffSection';
 import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.scss';
+import './App.scss';
 
 function App() {
   return (
