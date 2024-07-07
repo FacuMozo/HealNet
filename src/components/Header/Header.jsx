@@ -13,7 +13,7 @@ const Header = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <img src={logo} className="logo navbar-brand" alt="HealNet Logo" />
-                    <button className="join-us d-lg-none ">Join Us</button>
+                    <button className="join-us d-lg-none small">Join Us</button>
                     <div className=" collapse navbar-collapse m-auto " id="navbarNavAltMarkup">
                         <div className="navbar-nav text-start text-lg-center m-auto">
                             <a href="#home "
@@ -47,10 +47,10 @@ const Header = () => {
                                 Contact Us
                             </a>
                         </div>
+                        <button className="join-us notsmall d-sm-none d-lg-flex ">
+                            <p className='m-0'>Join Us</p>
+                        </button>
                     </div>
-                    <button className="join-us d-none d-lg-inline-block">
-                        <p className='m-0'>Join Us</p>
-                    </button>
                 </div>
             </nav>
         </header>

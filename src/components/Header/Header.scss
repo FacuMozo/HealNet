@@ -8,7 +8,7 @@
         padding: 3rem 0 0 1rem;
 
         .logo {
-            width: 168px;
+            max-width: 168px;
         }
 
         .nav-links {
@@ -49,5 +49,19 @@
                 transform: scale(1.05);
             }
         }
+        .small{
+            @media only screen and (max-width: 340px){
+                display: none;
+            }
+        }
+    }
+}
+.notsmall{
+    @media only screen and (max-width: 340px) {
+        display: flex;
+        margin-left: 1rem;
+    }
+    @media only screen and (min-width:340px) and (max-width: 660px) {
+        display: none;
     }
 }
