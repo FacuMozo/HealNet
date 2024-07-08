@@ -1,0 +1,16 @@
+@import '../styles/variables';
+
+@mixin bg-linear-gradient($color1:$primary-color, $color2:$secondary-color,$degrees:101.91deg, $b-radius:12px){
+    background: linear-gradient($degrees, $color1, $color2);
+    box-shadow: -8px 8px 28px rgba(0, 0, 0, 0.06);
+    border-radius: $b-radius;
+}
+
+@mixin bg-radial-gradient($color1:$primary-color, $color2:$secondary-color,$degrees:101.91deg, $b-radius:12px){
+    
+    background: radial-gradient($degrees, $color1,$color2);
+    box-shadow: -8px 8px 28px rgba(0, 0, 0, 0.06);
+    border-radius: $b-radius;
+}
+                                                
+
