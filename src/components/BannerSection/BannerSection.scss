@@ -135,7 +135,7 @@
                         
                         
             .review-border-gradient {
-                @include bg-linear-gradient(#95DDFF, #C5ECFF, 48deg);
+                @include bg-linear-gradient($primary-color-500,$primary-color-200, 48deg);
                 box-shadow: 3.12195px 9.36585px 21.8537px rgba(0, 0, 0, 0.06);
                 padding: 1.5px;
                 display: flex;
@@ -143,9 +143,7 @@
                 align-self: flex-end;
                 .review-card{
                     padding: 18px 23px;
-                    background: radial-gradient(197.8% 197.87% at 46.45% -32.32%, #FFFFFF 33.84%, #EEF9FF 97.64%);
                     @include bg-radial-gradient(#FFFFFF 33.84%,#EEF9FF 97.64%,197.8% 197.87% at 46.45% -32.32%,9px)
-
                 }
                 .img-reviews{
                     max-width: 196px;
@@ -153,7 +151,7 @@
             }
 
             .text-border-gradient {
-                @include bg-linear-gradient(#95DDFF, #C5ECFF, 48deg);
+                @include bg-linear-gradient($primary-color-500, $primary-color-200, 48deg);
                 position: relative;
                 padding: 2px;
                 display: flex;
