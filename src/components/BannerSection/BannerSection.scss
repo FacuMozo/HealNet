@@ -91,6 +91,10 @@
                 img{
                     margin-left: 12px;
                 }
+                &:hover {
+                    background: linear-gradient(101.91deg, lighten($primary-color, 05%), lighten($secondary-color, 10%));
+                    transform: scale(1.01);
+                }
 
             }
             .info{

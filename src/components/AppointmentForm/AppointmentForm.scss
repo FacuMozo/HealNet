@@ -1,17 +1,32 @@
 @import '../styles/variables';
+@import '../styles/backGroundGradient.scss';
+
+
 
 .appointment-form {
+    @include bg-linear-gradient(#C5ECFF,#95DDFF,101.91deg,28px);
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    box-sizing: border-box;
+
     .container {
-        max-width: 600px;
-        margin: auto;
+        display: flex;
+        flex-direction: column;
+        
         padding: 2rem;
-        background: linear-gradient(101.91deg, $primary-color, $secondary-color);
-        box-shadow: -8px 8px 28px rgba(0, 0, 0, 0.06);
-        border-radius: 12px;
-    
+        @include bg-radial-gradient(#FFFFFF 32.81%,$light-primary-color 97.64%, 114.87% 113.36% at 40.95% -10.45%,28px);
+        box-sizing: border-box;
         h2 {
-            text-align: center;
-            margin-bottom: 1rem;
+            text-align: start;
+            margin-bottom: 40px;
+            font-size: 32px;
+
+            .text-bold {
+                    font-weight: 700;
+                    color: #0084D4;
+            }
         }
 
         .form-group {
@@ -19,26 +34,41 @@
 
             label {
                 display: block;
+                text-align: start;
                 margin-bottom: 0.5rem;
             }
-
+            ::placeholder{
+                color: #E7E7E7;
+            }
             .form-control {
                 width: 100%;
-                padding: 0.5rem;
-                border-radius: 5px;
-                border: 1px solid #ccc;
+                padding: 18px;
+                border-radius: 12px;
+                border: 1px solid #E7E7E7;
+                
+            }
+            select:invalid {
+                color: #E7E7E7;
+            }
+            select:valid {
+                color: black;
             }
         }
 
         .submit-btn {
-            display: block;
-            width: 100%;
-            background-color: $primary-color;
+            background: linear-gradient(101.91deg, $primary-color, $secondary-color);
+            box-shadow: -8px 8px 28px rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
             color: #fff;
-            padding: 0.75rem;
+            padding: 0.5rem 1rem;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+
+            &:hover {
+                background: linear-gradient(101.91deg, lighten($primary-color, 10%), lighten($secondary-color, 10%));
+                transform: scale(1.05);
+            }
         }
     }
 }
