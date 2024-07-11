@@ -10,6 +10,9 @@
     flex-direction: column;
     margin: 0 100px ;
     box-sizing: border-box;
+    @media screen and (max-width: 650px) {
+        margin: 0 2rem ;
+    }
 
     .container-card {
         display: flex;
