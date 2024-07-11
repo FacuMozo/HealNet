@@ -1,37 +1,55 @@
 import React from 'react';
 import './ServicesSection.scss';
+import calendar from '../../images/iconos/services/calendar.png'
+import medicalNote from '../../images/iconos/services/medicalNote.png'
+import medicine from '../../images/iconos/services/medicine.png'
+import online from '../../images/iconos/services/online.png'
+import prescription from '../../images/iconos/services/prescription.png'
+import ondas from '../../images/iconos/services/ondas.png'
 
 const ServicesSection = () => {
     return (
         <section className="services-section">
-            <div className="container">
-                <h2>Our Services</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className="services-container">
+                <h2>Top <span className='text-gradient'>services</span> we offer</h2>
+                <p>In today’s fast-paced world, your health deserves the utmost attention and convenience. That’s why HealNet offers a suite of integrated services designed to cater to your healthcare needs digitally:</p>
                 <div className="services">
-                    <div className="service-card">
-                        <div className="icon">Icon1</div>
-                        <h3>Service 1</h3>
-                        <p>Description of service 1</p>
+                    <img src={ondas} className="onda-1" alt="" />
+                    <img src={ondas} className="onda-2" alt="" />
+                    <div className='card-border card-1'>
+                        <div className="service-card">
+                            <img src={online} className='icon' alt="" />
+                            <h3>Online Consultations</h3>
+                            <p>Consult with top doctors across various specialties via video or chat communication. It’s totally secure, private, and convenient. Choose the best time for an in-person visit with our easy-to-use scheduling system, or proceed with our online consultation.</p>
+                        </div>
                     </div>
-                    <div className="service-card">
-                        <div className="icon">Icon2</div>
-                        <h3>Service 2</h3>
-                        <p>Description of service 2</p>
+                    <div className='card-border card-2'>
+                        <div className="service-card ">
+                            <img src={calendar} className='icon' alt="" />
+                            <h3>Booking Appointments</h3>
+                            <p>Choose the best time for an in-person visit with our easy-to-use scheduling system, or proceed with our online consultation features.</p>
+                        </div>
                     </div>
-                    <div className="service-card">
-                        <div className="icon">Icon3</div>
-                        <h3>Service 3</h3>
-                        <p>Description of service 3</p>
+                    <div className='card-border card-3'>
+                        <div className="service-card">
+                            <img src={prescription} className='icon' alt="" />
+                            <h3>Prescriptions</h3>
+                            <p>Receive and renew prescriptions digitally after your consultation with our specialists .</p>
+                        </div>
                     </div>
-                    <div className="service-card">
-                        <div className="icon">Icon4</div>
-                        <h3>Service 4</h3>
-                        <p>Description of service 4</p>
+                    <div className='card-border card-3'>
+                        <div className="service-card ">
+                            <img src={medicalNote } className='icon' alt="" />
+                            <h3>Medical Notes</h3>
+                            <p>Obtain necessary medical notes for work or school with only a few clicks of hassle.</p>
+                        </div>
                     </div>
-                    <div className="service-card">
-                        <div className="icon">Icon5</div>
-                        <h3>Service 5</h3>
-                        <p>Description of service 5</p>
+                    <div className='card-border card-3'>
+                        <div className="service-card ">
+                            <img src={ medicine} className='icon' alt="" />
+                            <h3>Medicine Refills</h3>
+                            <p>Skip the pharmacy queues and save time + energy by ordering medicine refills online.</p>
+                        </div>
                     </div>
                 </div>
             </div>

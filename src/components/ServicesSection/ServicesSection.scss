@@ -1,38 +1,98 @@
+@import '../styles/textgradient';
+@import '../styles/variables';
+@import '../styles/backGroundGradient.scss';
+
 .services-section {
-    .container {
+    box-sizing: border-box;
+    margin: 0 100px;
+    .services-container {
         padding: 2rem;
         text-align: center;
 
         h2 {
-            margin-bottom: 1rem;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            .text-gradient{
+                @include textgradient;
+            }
+        }
+        p{
+            margin: 0 80px;
+            font-size: 16px;
+            color: $neutrals-300;
+            font-weight: 600;
+            margin-bottom: 52px;
         }
 
         .services {
+            position: relative;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: start;
+            gap: 40px;
 
+            .card-border{
+                display: flex;
+                justify-content: center;
+                padding: 2px;
+                @include bg-linear-gradient($primary-color-200,$primary-color-500,101.92deg,24px)
+            }
             .service-card {
+                display: flex;
+                flex-direction: column;
+                                
                 background: #fff;
                 border: 1px solid #ddd;
-                border-radius: 10px;
-                padding: 1rem;
-                margin: 0.5rem;
-                width: calc(33.333% - 1rem);
+                border-radius: 24px;
+                padding: 40px 40px 48px 40px;
+                
+                // width: calc(33.333% - 1rem);
                 text-align: left;
 
                 .icon {
-                    font-size: 2rem;
-                    margin-bottom: 0.5rem;
+                    width: 44px;
+                    margin-bottom: 1rem;
                 }
 
                 h3 {
-                    margin-bottom: 0.5rem;
+                    margin-bottom: 1rem;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #0069AB;
+
                 }
 
                 p {
+                    font-size: 14px;
+                    font-weight: 600;
                     margin: 0;
                 }
+            }
+            .onda-1{
+                        position: absolute;
+                        top: -22px;
+                        left: -60px;
+                        width: 142px;
+            }
+            .onda-2{
+                        position: absolute;
+                        bottom: -24px;
+                        right: -60px;
+                        width: 142px;
+                        
+            }
+
+            .card-1{
+                // flex-grow: 2;
+                max-width: calc(62.13% - 40px);
+            }
+            .card-2{
+                // flex-grow: 1;
+                max-width: calc(37.87% );  
+            }
+            .card-3{
+                max-width: calc(33.33% - 27px);
             }
         }
     }
