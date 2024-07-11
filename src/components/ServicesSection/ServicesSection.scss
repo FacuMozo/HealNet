@@ -94,6 +94,36 @@
             .card-3{
                 max-width: calc(33.33% - 27px);
             }
+            @media screen and (max-width: 1050px) {
+                .card-1{
+                    // flex-grow: 2;
+                    max-width: 100%;
+                }
+                .card-2{
+                    max-width: 100%;
+                    // max-width: calc(37.87% );  
+                }
+                .card-3{
+                    flex-grow: 1;
+                    max-width: 100%;
+                    // max-width: calc(33.33% - 27px);
+                    .service-card{
+                        flex-grow: 1;
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+    @media screen and (max-width: 650px) {
+        margin: 0 2rem;
+        .services-container{
+            padding: 0;
+            p{
+                margin: 0 ;
+                margin-bottom: 52px;
+            }
         }
     }
 }
