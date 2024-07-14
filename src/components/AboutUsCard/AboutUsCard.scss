@@ -6,12 +6,15 @@
 // background: linear-gradient(98.64deg, #0179B4 6.59%, #88D8FF 47.82%);
 
 .about-us-section {
+    display: flex;
     margin: 0 100px;
-        text-align: center;
-        
+    text-align: center;
+    
         .card-border{
             display: flex;
             justify-content: center;
+            flex-grow: 1;
+            gap: 0;
             padding: 2px;
             @include bg-linear-gradient($primary-color-200, $primary-color-500, 101.92deg, 28px)
         }
@@ -89,5 +92,12 @@
                 }
             }
         }
+        @media screen and (max-width: 650px) {
+            margin: 0 2rem;
     
+            .about-us-card {
+                padding: 2rem;
+    
+            }
+        }
 }
