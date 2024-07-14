@@ -1,0 +1,41 @@
+@import '../styles/textGradient';
+@import '../styles/_variables';
+@import '../styles/backGroundGradient.scss';
+
+.func-container{
+    column-gap: 20px;
+    .func-number{
+        @include bg-linear-gradient();
+        
+        justify-content:center;
+        align-items: center;
+        
+        span{
+            color: #FFF;
+    
+            font-size: 32px;
+            font-weight: 600;
+        }
+    
+        display: block;
+        min-width: 52px;
+        width: 52px;
+        flex-basis: 52px;
+        height: 52px;
+        border-radius: 100px;
+        flex-shrink: 0;
+    }
+    .content{
+        display: flex;
+        flex-grow: 0;
+        
+        flex-direction: column;
+        align-items: start;
+        p{
+            display: flex;
+            text-align: start;
+            text-wrap: wrap;
+            
+        }
+    }
+}
