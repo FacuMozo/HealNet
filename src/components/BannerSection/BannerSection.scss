@@ -74,11 +74,15 @@
             .btn-book-appointment {
                 @include bg-linear-gradient();
                 padding: 0.5rem 1rem;
-                width: 344px;
+                max-width: 344px;
                 height: 68px;
                 border: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 cursor: pointer;  
                 span {
+                    flex-grow: 0;
                     font-family: 'Manrope';
                     font-style: normal;
                     font-weight: 700;
@@ -101,7 +105,8 @@
             }
             .info-icons {
                 display: flex;
-                gap: 24.4px;
+                gap: 4%;
+                flex-wrap: wrap;
 
                 .icon {
                     margin: 0 0.5rem;
@@ -134,9 +139,10 @@
                 height: 100%;
                 object-fit: cover;
                 z-index: -1;
+                overflow-x: visible
             }
                         
-                        
+                    
             .review-border-gradient {
                 @include bg-linear-gradient($primary-color-500,$primary-color-200, 48deg);
                 box-shadow: 3.12195px 9.36585px 21.8537px rgba(0, 0, 0, 0.06);
@@ -150,6 +156,14 @@
                 }
                 .img-reviews{
                     max-width: 196px;
+                }
+                @media screen and (max-width: 650px) {
+                    .review-card{
+                        padding: 0.5rem;
+                    }
+                    .img-reviews{
+                        max-width: 150px;
+                    }
                 }
             }
 

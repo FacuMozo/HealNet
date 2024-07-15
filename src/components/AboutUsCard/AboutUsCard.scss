@@ -72,7 +72,7 @@
                     margin: 0;
                 }
                 .about-us-btn{
-                    width: 309px;
+                    max-width: 309px;
                     padding: 18px 36px;
                     margin-top: 28px;
                     background-color: #00A4F4;
@@ -96,8 +96,13 @@
             margin: 0 2rem;
     
             .about-us-card {
-                padding: 2rem;
-    
+                padding: 1rem;
+                .card-content{
+                    img{
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
             }
         }
 }
