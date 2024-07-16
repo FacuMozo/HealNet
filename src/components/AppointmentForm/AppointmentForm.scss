@@ -20,6 +20,9 @@
         box-sizing: border-box;
         
         padding: 2rem;
+        @media screen and (max-width:650px) {
+            padding: 1rem;
+        }
         @include bg-radial-gradient(#FFFFFF 32.81%,$light-primary-color 97.64%, 114.87% 113.36% at 40.95% -10.45%,28px);
         box-sizing: border-box;
         h2 {
