@@ -1,25 +1,34 @@
 import React from 'react';
 import './ContactUs.scss';
+import '../styles/textGradient.scss'
 
-const ContactUs = () => {
+import emailIcon from '../../images/iconos/ic-email.png'
+import userIcon from '../../images/iconos/ic-user.png'
+import arrowLeft from '../../images/iconos/arrow-left.png'
+
+const ContactUs = () => { 
     return (
         <section className="contact-us">
-            <div className="container">
-                <h2>Contact Us</h2>
-                <form>
-                    <div className="form-group">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" id="name" className="form-control" placeholder="Enter your name" />
+            <div className="d-flex flex-column">
+                <div className="header">
+                    <h2>Reach our <span className='text-gradient'>Help Desk</span> for support</h2>
+                    <p>Questions? Need assistance? Our dedicated support team is here to help you every step of the way:</p>
+                </div>
+                <form className='d-flex'>
+                    <div className='form-group-border'>
+                        <div className="form-group">
+                            <img src={userIcon} alt="" />
+                            <input type="text" id="name" className="form-control" placeholder="Enter Your First Name" />
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" className="form-control" placeholder="Enter your email" />
+                    <div className='form-group-border'>
+                        <div className="form-group">
+                            <img src={emailIcon} alt="" />
+                            <input type="email" id="email" className="form-control" placeholder="Enter your email address" />
+                        </div>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Message</label>
-                        <textarea id="message" className="form-control" rows="5" placeholder="Enter your message"></textarea>
-                    </div>
-                    <button type="submit" className="submit-btn">Send Message</button>
+
+                    <button type="submit" className="submit-btn">Contact us <img src={arrowLeft} alt="" /></button>
                 </form>
             </div>
         </section>
