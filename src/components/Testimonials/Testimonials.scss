@@ -29,8 +29,8 @@
            }
             .esfera-1 {
                 position: absolute;
-                top: -65px;
-                left: -60px;
+                top: -60px;
+                left: -42px;
                 width: 142px;
                 overflow: hidden;
                 z-index: -1;
@@ -38,8 +38,8 @@
 
             .esfera-2 {
                 position: absolute;
-                bottom: -14%;
-                right: -5%;
+                bottom: -48px;
+                right: -50px;
                 width: 142px;
                 overflow: hidden;
                 z-index: -1;
@@ -49,10 +49,6 @@
         .testimonial-cards{
             .row-1{
                 flex-wrap: wrap;
-            }
-            .esfera-2{
-                bottom: -48px;
-                right: -48px;
             }
         } 
     }
@@ -66,7 +62,7 @@
             }
             .esfera-2 {
                     bottom: -48px;
-                    right: -48px;
+                    right: -32px;
                     overflow: hidden;
             }
         }
