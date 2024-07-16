@@ -1,0 +1,121 @@
+@import '../styles/textGradient';
+@import '../styles/variables';
+@import '../styles/backGroundGradient.scss';
+
+
+.staff-card {
+    @include bg-radial-gradient(#35BDFF 38.13%,#008CD0 100%,114.87% 113.36% at 40.95% -10.45%,28px);
+    border: 2px solid lightblue;
+    
+    display: flex;
+    flex-direction: row;
+    // position: relative;
+    text-align: center;
+    .image{
+        position: relative;
+        width: 36%;
+        
+        img {
+            border-radius: 0 0 0 28px;
+            height: 110%;
+            
+            
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }        
+    }
+    .card-body{
+        width:60%;
+        padding: 2rem 4.5rem 2.5rem 2.5rem;
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: start;
+        h3, p, span {
+            text-align: start;
+            color: #EFF9FF;
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .sm-image{
+            display: none;
+        }
+        button{
+            background-color: $primary-blues-50;
+            padding: 1rem 20px;
+            max-width: 246px;
+            border-radius: 12px;
+            border: transparent;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            
+            span{
+                margin-right: 0.5rem;
+                text-wrap: nowrap;
+                font-size: 20px;
+                font-weight: 600;
+                @include textgradient(#007DAA,#15B2FF)
+            }
+        }
+    }
+    @media screen and (max-width:1340px) {
+        .card-body{
+            padding-right: 2rem;
+        }
+    }
+    @media screen and (max-width:900px) {
+        flex-direction: column-reverse;
+        .card-body{
+            width: 100%;
+            // order: 1;
+            .sm-image{
+                display: flex;
+                transform: translate(0%);
+                width: 40%;
+                margin-bottom: 1rem;
+                object-fit: cover;
+            }
+        }
+        .image{
+            // order: 2;
+            display: none;
+            
+            
+        }
+
+    }
+    @media screen and (max-width:650px) {
+        padding: 1rem;
+        .card-body{
+            padding: 0;
+            .sm-image{
+                width: 70%;
+                max-width: 300px;
+            }
+            button{
+                pad
+                span{
+                    word-wrap: break-word;
+                }
+                img{
+                    width: 26px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
