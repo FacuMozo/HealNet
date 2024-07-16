@@ -1,0 +1,42 @@
+@import '../styles/textGradient';
+@import '../styles/variables';
+@import '../styles/backGroundGradient.scss';
+
+.card-border {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-grow: 1;
+    padding: 2px;
+    @include bg-linear-gradient($primary-color-200, $primary-color-500, 101.92deg, 20px);
+
+    .testimony-card{
+        display: flex;
+        padding: 28px 40px;
+        align-items: center;
+        @include bg-radial-gradient(#EBF8FF 2.36%,#FDFEFF 49.86%,192.09% 498.22% at 0% 12.07%,20px);
+
+        img{
+            max-width: 76px;
+
+            margin-right: 20px;
+            object-fit: contain;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            &.autor{
+                font-weight: 700;
+            }
+        }
+        @media screen and (max-width:650px) {
+            flex-direction: column;
+            padding: 1rem ;
+            img{
+                margin-right: 0.5rem;
+            }
+            
+        }
+    }
+}
