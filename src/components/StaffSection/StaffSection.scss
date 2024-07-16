@@ -1,3 +1,6 @@
+@import '../styles/_variables';
+@import '../styles/textGradient.scss';
+
 .staff-section {
     display: flex;
     flex-direction: column;
@@ -6,11 +9,23 @@
         
         
         text-align: center;
-
-        h2 {
-            margin: 0;
-            font-size: 40px;
-            font-weight: bold;
+        .header{
+            h2 {
+                margin: 2rem 0;
+                font-size: 40px;
+                font-weight: bold;
+                .gradient{
+                    @include textgradient(#88d8FF 35.04%,#0179B4 93.41%);
+                }
+            }
+            p{
+                margin: 2rem 0;
+                padding: 0 19px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                color: $neutrals-300;
+            }
         }
 
         .staff-cards {
@@ -20,6 +35,24 @@
             // flex-wrap: wrap;
             justify-content: center;
 
+            position: relative;
+            .img-1 {
+                position: absolute;
+                top: -13.35px;
+                left: -58px;
+                width: 116px;
+                overflow: hidden;
+                z-index: -1;
+            }
+            
+            .img-2 {
+                position: absolute;
+                bottom: -16px;
+                right: -58px;
+                width: 116px;
+                overflow: hidden;
+                z-index: -1;
+            }
             
         }
     @media screen and (max-width: 1300px) {
@@ -30,5 +63,15 @@
     }
     @media screen and (max-width: 650px) {
         margin: 0 2rem;
+        .header{
+            p{
+                padding: 0;
+            }
+        }
+        .staff-cards{
+            .img-2{
+                right: -32px;
+            }
+        }
     }
 }

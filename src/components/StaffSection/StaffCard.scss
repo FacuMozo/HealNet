@@ -3,6 +3,14 @@
 @import '../styles/backGroundGradient.scss';
 
 
+
+
+
+.border-gradient{
+    @include bg-linear-gradient($primary-color-200,$primary-color-500,101.91deg,28px);
+    box-shadow: 3.12195px 9.36585px 21.8537px rgba(0, 0, 0, 0.06);
+    padding: 0.5px;
+}
 .staff-card {
     @include bg-radial-gradient(#35BDFF 38.13%,#008CD0 100%,114.87% 113.36% at 40.95% -10.45%,28px);
     border: 2px solid lightblue;
