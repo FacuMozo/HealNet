@@ -9,6 +9,7 @@ import test1 from '../../images/testimony/testimony-1.png'
 import test2 from '../../images/testimony/testimony-2.png'
 import test3 from '../../images/testimony/testimony-3.png'
 import test4 from '../../images/testimony/testimony-4.png'
+import esfera from '../../images/testimony/esfera.png'
 
 const Testimonials = () => {
     const text1 = "“After my knee surgery, the convenience of online consultations made my recovery smoother than I could have imagined.\”";
@@ -22,6 +23,8 @@ const Testimonials = () => {
                     <h2><span className='text-gradient'>Patient Testimonials:</span><br /> Hear from Those We’ve Cared For</h2>
                 </div>
                 <div className="testimonial-cards">
+                    <img className="esfera-1" src={esfera} alt="" />
+                    <img className="esfera-2" src={esfera} alt="" />
                     <div className='row-1 d-flex'> 
                         <Testimony text={text1} autor="Linda A." imagen={test1}/>
                         <Testimony text={text2} autor="Henry B." imagen={test2} />
