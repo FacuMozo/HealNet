@@ -18,21 +18,13 @@ function App() {
     <div className="App">
       <Header />
       <BannerSection />
-      <hr className='border-5 border-primary'/>
       <AppointmentForm />
-      <hr className='border-5 border-primary'/>
       <ServicesSection />
-      <hr className='border-5 border-primary'/>
       <AboutUsCard />
-      <hr className='border-5 border-primary'/>
       <PlatformFunctionality />
-      <hr className='border-5 border-primary'/>
       <Testimonials />
-      <hr className='border-5 border-primary' />
       <StaffSection />
-      <hr className='border-5 border-primary' />
       <ContactUs />
-      <hr className='border-5 border-primary' />
       <Footer />
       
     </div>
