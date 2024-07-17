@@ -4,7 +4,7 @@
 
 .services-section {
     box-sizing: border-box;
-    margin: 0 100px;
+    margin: 8rem 100px;
     .services-container {
         padding: 2rem;
         text-align: center;
@@ -118,7 +118,7 @@
         }
     }
     @media screen and (max-width: 650px) {
-        margin: 0 2rem;
+        margin: 8rem 2rem;
         .services-container{
             padding: 0;
             p{

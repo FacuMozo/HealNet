@@ -17,6 +17,7 @@
         .columna-1{
             img{
                 margin-bottom: 50px;
+                cursor: pointer;
             }
             p{
                 font-size: 16px;
@@ -47,6 +48,8 @@
                     font-size: 16px;
                     font-weight: 500;
                     text-decoration: none;
+                    // pointer-events: none;
+                    cursor: pointer;
                     &:hover {
                         color: $secondary-color;
                     }
@@ -63,11 +66,10 @@
     }
     .social-icons {
         a {
-            pointer-events: none;
             color: #fff;
             margin: 0 0.5rem;
             font-size: 1.5rem;
-
+            cursor: pointer;
             &:hover {
                 color: $secondary-color;
             }

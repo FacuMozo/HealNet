@@ -2,7 +2,7 @@
 @import '../styles/backGroundGradient.scss';
 
 .contact-us {
-    margin: 0 100px;
+    margin: 128px 100px;
     padding: 0 156px;
     
         
@@ -11,7 +11,7 @@
         h2 {
             margin-bottom: 2rem;
 
-            font-size: 40;
+            font-size: 40px;
             font-weight: 700;
         }
         p{
@@ -65,6 +65,10 @@
         border: none;
         border-radius: 12px;
         cursor: pointer;
+        &:hover {
+            background: linear-gradient(101.91deg, lighten($secondary-color, 10%), lighten(#00A4F4, 10%));
+            transform: scale(1.05);
+        }
     }
 
     @media screen and (max-width: 1250px) {
@@ -90,7 +94,7 @@
         }
     }
     @media screen and (max-width: 650px) {
-        margin: 0 2rem;
+        margin: 128px 2rem;
         padding: 0;
     }
     

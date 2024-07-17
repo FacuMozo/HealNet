@@ -8,10 +8,10 @@
     padding: 2px;
     display: flex;
     flex-direction: column;
-    margin: 0 100px ;
+    margin: 64px 100px  ;
     box-sizing: border-box;
     @media screen and (max-width: 650px) {
-        margin: 0 2rem ;
+        margin: 64px 2rem ;
     }
 
     .container-card {
