@@ -2,11 +2,12 @@
 @import '../styles/backGroundGradient';
 
 .header {
-    .container {
+    margin: 0 100px;
+    .nav-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem 0 0 1rem;
+        padding: 3rem 0 0 0rem;
 
         .logo {
             max-width: 168px;
@@ -14,11 +15,14 @@
 
         .nav-links {
             display: flex;
-            align-items: center;
+            align-items: start;
+            justify-content: center;
+            column-gap: 40px;
+            width: 100%;
         }
         .link {
             
-            margin: 0 1rem;
+            margin: 0 ;
             text-decoration: none;
             color: #333;
             font-weight: 600;
@@ -35,9 +39,12 @@
         }
 
         .join-us {
-            font-family: 'Manrope', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
+            span{
+                font-family: 'Manrope', sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                text-wrap: nowrap;
+            }
             @include bg-linear-gradient($primary-color,$secondary-color);
             color: #fff;
             padding: 0.5rem 1rem;
@@ -52,18 +59,27 @@
             }
         }
         .small{
-            @media only screen and (max-width: 340px){
+            @media only screen and (max-width: 420px){
                 display: none;
             }
         }
+        @media only screen and (max-width: 1225px){
+            .nav-links{
+                column-gap: 0.5rem;
+            }
+        }
+    }
+    @media only screen and (max-width: 650px){
+        margin: 0 2rem;
     }
 }
 .notsmall{
-    @media only screen and (max-width: 340px) {
+    @media only screen and (max-width: 420px) {
         display: flex;
-        margin-left: 1rem;
+        margin-left: 0;
     }
-    @media only screen and (min-width:340px) and (max-width: 660px) {
+    @media only screen and (min-width:420px) and (max-width: 660px) {
         display: none;
+        margin: 0;
     }
 }

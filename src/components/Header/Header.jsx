@@ -8,14 +8,14 @@ const Header = () => {
     return (
         <header className="header">
             <nav className='navbar navbar-expand-lg navbar'>
-                <div className="container">
+                <div className="container-fluid nav-container">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <img src={logo} className="logo navbar-brand" alt="HealNet Logo" />
-                    <button className="join-us d-lg-none small">Join Us</button>
+                    <button className="join-us d-lg-none small"><span>Join Us</span></button>
                     <div className=" collapse navbar-collapse m-auto " id="navbarNavAltMarkup">
-                        <div className="navbar-nav text-start text-lg-center m-auto">
+                        <div className="navbar-nav text-start text-lg-center nav-links">
                             <a href="#home "
                                 className={`link  nav-link ${activeNav === '#home' ? 'active' : ''}`}
                                 onClick={() => setActiveNav('#home')}>
@@ -48,7 +48,7 @@ const Header = () => {
                             </a>
                         </div>
                         <button className="join-us notsmall d-sm-none d-lg-flex ">
-                            <p className='m-0'>Join Us</p>
+                            <span className='m-0'>Join Us</span>
                         </button>
                     </div>
                 </div>
