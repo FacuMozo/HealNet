@@ -7,6 +7,7 @@ import './AppointmentForm.scss';
 
 const AppointmentForm = () => {
     const [emails, setEmails] = useState([]);
+    const [selectedEmail, setSelectedEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [phoneError, setPhoneError] = useState('');
     const [currentDate, setCurrentDate] = useState('');
@@ -54,6 +55,7 @@ const AppointmentForm = () => {
         if (validatePhoneNumber(phoneNumber)) {
             console.log('Formulario enviado');
             // Limpiar el formulario después de enviarlo
+            setSelectedEmail('');
             setPhoneNumber('');
             setCurrentDate(new Date().toISOString().slice(0, 16));
             document.getElementById("email").value = "";
@@ -73,6 +75,9 @@ const AppointmentForm = () => {
             e.target.type = 'text';
         }
     };
+    const handleEmailChange = (event) => {
+        setSelectedEmail(event.target.value);
+    };
 
     return (
         <div className='p-0'>
@@ -82,8 +87,8 @@ const AppointmentForm = () => {
                     <form className='row align-items-end' onSubmit={handleSubmit}>
                         <div className="col-12 col-lg-3 form-group">
                             <label htmlFor="email"><img className='me-2' src={email} alt="" />Email Address</label>
-                            <select id="email" className="form-control" required>
-                                <option className='placeholder-option' value="" disabled selected>Enter Your Email Address</option>
+                            <select id="email" className="form-control" value={selectedEmail} onChange={handleEmailChange} required>
+                                <option className='placeholder-option' value="" disabled >Enter Your Email Address</option>
                                 {emails.map((email, index) => (
                                     <option key={index} value={email}>
                                         {email}

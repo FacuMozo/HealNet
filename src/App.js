@@ -12,10 +12,12 @@ import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles.scss';
 import './App.scss';
+import Vector1 from'./images/Vector1.png'
 
 function App() {
   return (
     <div className="App">
+      <img className="vector" src={Vector1} alt="" />
       <Header />
       <BannerSection />
       <AppointmentForm />
