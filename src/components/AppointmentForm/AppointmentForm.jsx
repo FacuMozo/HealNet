@@ -3,6 +3,7 @@ import email from '../../images/iconos/email.png';
 import calendar from '../../images/iconos/calendar.png';
 import phone from '../../images/iconos/phone.png';
 import check from '../../images/iconos/check.png';
+import decoration from '../../images/decoration.png';
 import './AppointmentForm.scss';
 
 const AppointmentForm = () => {
@@ -83,6 +84,7 @@ const AppointmentForm = () => {
         <div className='p-0'>
             <div className='appointment-form'>
                 <div className="container-card ">
+                    <img className="decoration" src={decoration} alt="" />
                     <h2 className='text-bold'>Easily book an appointment in 3 simple steps.</h2>
                     <form className='row align-items-end' onSubmit={handleSubmit}>
                         <div className="col-12 col-lg-3 form-group">
