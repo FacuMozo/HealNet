@@ -19,8 +19,9 @@ const Testimonials = () => {
     return (
         <section className="testimonials">
             <div className="d-flex flex-column">
-                <div>
+                <div className='testimonials-header'>
                     <h2><span className='text-gradient'>Patient Testimonials:</span><br /> Hear from Those We’ve Cared For</h2>
+                    <p>Discover the difference we make through the voices of those we’ve served:</p>
                 </div>
                 <div className="testimonial-cards">
                     <img className="esfera-1" src={esfera} alt="" />

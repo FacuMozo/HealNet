@@ -84,8 +84,10 @@
                     border: none;
                     cursor: pointer;
                     transition: background 0.3s, transform 0.3s;
-                    font-size: 24px;
-                    font-weight: 700;
+                    span{
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
                     &:hover {
                         background: linear-gradient(101.91deg, lighten($secondary-color, 10%), lighten(#00A4F4, 10%));
                         transform: scale(1.05);

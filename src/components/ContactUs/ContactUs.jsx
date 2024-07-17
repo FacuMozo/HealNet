@@ -28,7 +28,7 @@ const ContactUs = () => {
                         </div>
                     </div>
 
-                    <button type="submit" className="submit-btn">Contact us <img src={arrowLeft} alt="" /></button>
+                    <button type="submit" className="submit-btn"><span>Contact us</span><img src={arrowLeft} alt="" /></button>
                 </form>
             </div>
         </section>

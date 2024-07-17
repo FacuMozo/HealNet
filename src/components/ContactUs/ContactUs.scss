@@ -46,6 +46,11 @@
                 padding: 0;
                 border: transparent;
             }
+            ::placeholder {
+                color: $neutrals-300;
+                opacity: 1;
+                /* Firefox */
+            }
         }
     }
 

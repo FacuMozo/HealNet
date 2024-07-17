@@ -9,6 +9,7 @@ const AppointmentForm = () => {
     const [emails, setEmails] = useState([]);
     const [phoneNumber, setPhoneNumber] = useState('');
     const [phoneError, setPhoneError] = useState('');
+    const [currentDate, setCurrentDate] = useState('');
 
     useEffect(() => {
         fetch('https://dummyapi.online/api/users')
@@ -22,44 +23,54 @@ const AppointmentForm = () => {
             });
     }, []);
 
-    const [currentDate, setCurrentDate] = useState('');
-
     useEffect(() => {
         const now = new Date();
         const formattedDate = now.toISOString().slice(0, 16); // Formato 'YYYY-MM-DDTHH:MM'
         setCurrentDate(formattedDate);
     }, []);
 
-    const validatePhoneNumber = (number) => { 
-        const argentinianPhoneRegex = /^\+54\d{9,12}$/; 
-        if (argentinianPhoneRegex.test(number)) { 
-            setPhoneError(''); 
-            return true; 
-        } else { 
-            setPhoneError('Invalid phone. Enter an Argentinian number with the format +54XXXXXXXXXX'); 
-            return false; 
-        } 
-    }; 
+    const validatePhoneNumber = (number) => {
+        const argentinianPhoneRegex = /^\+54\d{9,12}$/;
+        if (argentinianPhoneRegex.test(number)) {
+            setPhoneError('');
+            return true;
+        } else {
+            setPhoneError('Invalid phone. Enter an Argentinian number with the format +54XXXXXXXXXX');
+            return false;
+        }
+    };
 
-    const handlePhoneChange = (e) => { 
-        const number = e.target.value; 
-        setPhoneNumber(number); 
-    }; // Línea modificada
+    const handlePhoneChange = (e) => {
+        const number = e.target.value;
+        setPhoneNumber(number);
+    };
 
-    const handleSubmit = (e) => { 
-        e.preventDefault(); 
-        if (validatePhoneNumber(phoneNumber)) { 
-            // Aquí puedes manejar el envío del formulario si la validación es exitosa 
-            console.log('Formulario enviado'); 
-        } 
-    }; 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validatePhoneNumber(phoneNumber)) {
+            console.log('Formulario enviado');
+        }
+    };
+
+    const handleFocus = (e) => {
+        e.target.type = 'datetime-local';
+        if (!e.target.value) {
+            e.target.value = currentDate;
+        }
+    };
+
+    const handleBlur = (e) => {
+        if (!e.target.value) {
+            e.target.type = 'text';
+        }
+    };
 
     return (
         <div className='p-0'>
             <div className='appointment-form'>
                 <div className="container-card ">
                     <h2 className='text-bold'>Easily book an appointment in 3 simple steps.</h2>
-                    <form className='row align-items-end' onSubmit={handleSubmit}> {/* Línea modificada */}
+                    <form className='row align-items-end' onSubmit={handleSubmit}>
                         <div className="col-12 col-lg-3 form-group">
                             <label htmlFor="email"><img className='me-2' src={email} alt="" />Email Address</label>
                             <select id="email" className="form-control" required>
@@ -73,27 +84,29 @@ const AppointmentForm = () => {
                         </div>
                         <div className="col-12 col-lg-3 form-group">
                             <div>
-                            <label htmlFor="phone"><img className='me-2' src={phone} alt="" />Contact Number</label>
-                            {phoneError && <small className="text-danger">{phoneError}</small>} {/* Línea modificada */}
-
+                                <label htmlFor="phone"><img className='me-2' src={phone} alt="" />Contact Number</label>
+                                {phoneError && <small className="text-danger">{phoneError}</small>}
                             </div>
                             <input
                                 type="text"
                                 id="phone"
                                 className="form-control"
                                 placeholder="Enter your phone number"
-                                value={phoneNumber} 
-                                onChange={handlePhoneChange} 
+                                value={phoneNumber}
+                                onChange={handlePhoneChange}
                                 required
                             />
                         </div>
                         <div className="col-12 col-lg-3 form-group">
                             <label htmlFor="date"><img className='me-2' src={calendar} alt="" />Date of Appointment</label>
                             <input
-                                type="datetime-local"
-                                value={currentDate}
-                                min={currentDate}
+                                type="text"
+                                placeholder="Select Date of Appointment"
+                                // value={currentDate}
+                                // min={currentDate}
                                 step="1800"
+                                onFocus={handleFocus}
+                                onBlur={handleBlur}
                                 id="date"
                                 className="form-control"
                                 required
@@ -103,9 +116,9 @@ const AppointmentForm = () => {
                             <button
                                 type="submit"
                                 className="submit-btn"
-                                disabled={!!phoneError} // Línea modificada
+                                disabled={!!phoneError}
                             >
-                                Book Now<img src={check} alt="" />
+                                <span>Book Now</span><img src={check} alt="" />
                             </button>
                         </div>
                     </form>

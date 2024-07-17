@@ -23,7 +23,7 @@ const StaffSection = () => {
                 <img className="img-1" src={img} alt="" />
                 <img className="img-2" src={img} alt="" />
                 <StaffCard name="Sarah Johnson" profession="Cardiologist" description={p1} image={doctor1} />
-                <StaffCard name="Sarah Johnson" profession="Dermatologist" description={p2} image={doctor2} />
+                <StaffCard name="Mark Lee" profession="Dermatologist" description={p2} image={doctor2} />
             </div>
 
         </section>

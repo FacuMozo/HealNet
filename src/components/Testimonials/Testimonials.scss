@@ -1,11 +1,21 @@
+@import '../styles/variables.scss';
+
 .testimonials {
     display: flex;
     margin: 8rem 100px;
     padding: 0 42px;
-        h2 {
-            margin-bottom: 2rem;
-            font-size: 40px;
-            font-weight: 700;
+        .testimonials-header{
+            margin-bottom: 52px;
+            h2 {
+                margin-bottom: 2rem;
+                font-size: 40px;
+                font-weight: 700;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 600;
+                color: $neutrals-300;
+            }
         }
 
         .testimonial-cards {
