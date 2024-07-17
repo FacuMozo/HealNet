@@ -10,7 +10,7 @@ const ContactUs = () => {
     return (
         <section className="contact-us">
             <div className="d-flex flex-column">
-                <div className="header">
+                <div className="contact-header">
                     <h2>Reach our <span className='text-gradient'>Help Desk</span> for support</h2>
                     <p>Questions? Need assistance? Our dedicated support team is here to help you every step of the way:</p>
                 </div>

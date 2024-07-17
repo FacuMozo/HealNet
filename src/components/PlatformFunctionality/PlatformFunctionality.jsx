@@ -15,7 +15,7 @@ const PlatformFunctionality = () => {
             <div className="func-container">
                 <div className='section-header'>
                     <h2>How <span className='text-gradient'>our platform</span> works</h2>
-                    <p className=' p-0'> Navigating your healthcare journey with HealNet is seamless. Just follow these steps mentioned below to proceed with your selected services. You can also see our FAQ section for more guidance:</p>
+                    <p className=''> Navigating your healthcare journey with HealNet is seamless. Just follow these steps mentioned below to proceed with your selected services. You can also see our FAQ section for more guidance:</p>
                 </div>
                 <div className='container-body d-flex flex-lg-row flex-column'>
                     <div className="features order-2 order-lg-1">

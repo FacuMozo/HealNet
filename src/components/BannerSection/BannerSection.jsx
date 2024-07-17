@@ -18,7 +18,7 @@ const BannerSection = () => {
         <section className="banner-section">
             <div className="container">
                 <div className="column-1">
-                    <h1>Your <span className='gradient'>trusted healthcare</span> partner</h1>
+                    <h1>Your <span className='gradient'>trusted partner</span> in digital healthcare.</h1>
                     <p><span className='text-bold'>Empowering Your Health at Every Step.</span> Experience personalized medical care from the comfort of your home. Connect with <span className='text-bold'>certified doctors,</span> or manage prescriptions, and schedule appointments with ease. Ready to take control of your health? <span className='text-bold'>Get Started</span> or Book an Appointment today.</p>
                     <button className="btn-book-appointment"><span>Book an appointment</span><img src={arrow} alt=">" /></button>
                     <div>

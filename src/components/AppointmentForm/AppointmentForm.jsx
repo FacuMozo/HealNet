@@ -61,7 +61,7 @@ const AppointmentForm = () => {
                     <h2 className='text-bold'>Easily book an appointment in 3 simple steps.</h2>
                     <form className='row align-items-end' onSubmit={handleSubmit}> {/* Línea modificada */}
                         <div className="col-12 col-lg-3 form-group">
-                            <label htmlFor="email"><img className='me-2' src={email} alt="" />Email</label>
+                            <label htmlFor="email"><img className='me-2' src={email} alt="" />Email Address</label>
                             <select id="email" className="form-control" required>
                                 <option className='placeholder-option' value="" disabled selected>Enter Your Email Address</option>
                                 {emails.map((email, index) => (
@@ -73,7 +73,7 @@ const AppointmentForm = () => {
                         </div>
                         <div className="col-12 col-lg-3 form-group">
                             <div>
-                            <label htmlFor="phone"><img className='me-2' src={phone} alt="" />Phone</label>
+                            <label htmlFor="phone"><img className='me-2' src={phone} alt="" />Contact Number</label>
                             {phoneError && <small className="text-danger">{phoneError}</small>} {/* Línea modificada */}
 
                             </div>
@@ -88,7 +88,7 @@ const AppointmentForm = () => {
                             />
                         </div>
                         <div className="col-12 col-lg-3 form-group">
-                            <label htmlFor="date"><img className='me-2' src={calendar} alt="" />Date</label>
+                            <label htmlFor="date"><img className='me-2' src={calendar} alt="" />Date of Appointment</label>
                             <input
                                 type="datetime-local"
                                 value={currentDate}

@@ -14,7 +14,7 @@ const StaffSection = () => {
     return (
         <section className="staff-section">
 
-            <div className='header'>
+            <div className='staff-header'>
                 <h2><span className='gradient'>Masters of Medicine:</span> <br />Meet our team of specialists</h2>
                 <p>Our team of specialists is at the forefront of medical innovation. Each specialist brings a unique blend of expertise, empathy, and experience to ensure that your health is in the best hands:</p>
             </div>

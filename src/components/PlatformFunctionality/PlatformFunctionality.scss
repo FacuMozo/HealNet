@@ -25,9 +25,10 @@
             }
     
             p {
-                width: 66%;
+                // width: 66%;
+                padding: 0 200px;
                 font-size: 16px;
-                font-weight: 500;
+                font-weight: 600;
                 color: $neutrals-300;
             }
         }
@@ -168,6 +169,7 @@
             .section-header{
                 p{
                     width: 100%;
+                    padding: 0;
                 }
             }
                 

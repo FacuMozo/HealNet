@@ -6,7 +6,7 @@
     padding: 0 156px;
     
         
-    .header{
+    .contact-header{
         margin-bottom: 3rem;
         h2 {
             margin-bottom: 2rem;
@@ -72,7 +72,7 @@
     }
 
     @media screen and (max-width: 1250px) {
-        .header{
+        .contact-header{
             p{
                 margin: 0 10%;
             }
@@ -87,7 +87,7 @@
     }
     @media screen and (max-width: 1050px) {
         padding: 50px;
-        .header{
+        .contact-header{
             p{
                 margin: 0 0;
             }

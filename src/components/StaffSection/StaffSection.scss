@@ -9,7 +9,7 @@
         
         
         text-align: center;
-        .header{
+        .staff-header{
             h2 {
                 margin: 2rem 0;
                 font-size: 40px;
@@ -63,7 +63,7 @@
     }
     @media screen and (max-width: 650px) {
         margin: 8rem 2rem;
-        .header{
+        .staff-header{
             p{
                 padding: 0;
             }
