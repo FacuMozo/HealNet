@@ -37,8 +37,8 @@ const Footer = () => {
                     </div>
                     <div className='columna '>
                         <span>Legal</span>
-                        <a  onclick="return false;">Terms & Conditions</a>
-                        <a  onclick="return false;">Privacy Policy</a>
+                        <a  >Terms & Conditions</a>
+                        <a  >Privacy Policy</a>
                         <a >Cookie Notice</a>
                         <a >Cookie Preferences</a>
                         <a >Trust Center</a>

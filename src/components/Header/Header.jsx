@@ -10,7 +10,7 @@ const Header = () => {
             <nav className='navbar navbar-expand-lg navbar'>
                 <div className="container-fluid nav-container">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                     <img src={logo} className="logo navbar-brand" alt="HealNet Logo" />
                     <button className="join-us d-lg-none small"><span>Join Us</span></button>

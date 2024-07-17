@@ -139,7 +139,7 @@
                 height: 100%;
                 object-fit: cover;
                 z-index: -1;
-                overflow-x: visible
+                // overflow-x: visible
             }
                         
                     
@@ -216,6 +216,9 @@
                 }
             }
             @media screen and (max-width:650px) {
+                .back-img{
+                    width: 100vw;
+                }
                 .star-card{
                     margin-top: 0.25rem;
                     padding: 0.25rem;

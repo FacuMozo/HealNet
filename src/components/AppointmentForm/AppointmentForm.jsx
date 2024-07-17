@@ -43,12 +43,21 @@ const AppointmentForm = () => {
     const handlePhoneChange = (e) => {
         const number = e.target.value;
         setPhoneNumber(number);
+        // Restablecer el error cuando el usuario empiece a escribir
+        if (phoneError) {
+            validatePhoneNumber(number);
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validatePhoneNumber(phoneNumber)) {
             console.log('Formulario enviado');
+            // Limpiar el formulario después de enviarlo
+            setPhoneNumber('');
+            setCurrentDate(new Date().toISOString().slice(0, 16));
+            document.getElementById("email").value = "";
+            document.getElementById("date").value = "";
         }
     };
 
@@ -102,8 +111,7 @@ const AppointmentForm = () => {
                             <input
                                 type="text"
                                 placeholder="Select Date of Appointment"
-                                // value={currentDate}
-                                // min={currentDate}
+                                min={currentDate}
                                 step="1800"
                                 onFocus={handleFocus}
                                 onBlur={handleBlur}
